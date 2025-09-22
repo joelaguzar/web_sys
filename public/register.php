@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'db.php';
+    require __DIR__ . '/../config/database.php';
 
     if (isset($_POST['register'])) {
         $sr_code = pg_escape_string($dbconn, $_POST['sr_code']);
